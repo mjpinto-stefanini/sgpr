@@ -1,0 +1,31 @@
+.bd-example {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-bottom: 10%;
+}
+
+p.titulo-site{
+    text-align:left;
+    color: white;
+}
+p.titulo-site a{
+    display:block;
+    font-weight: bold;
+    color: white;
+}
+.copyright{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar{
+    background: #6898FF;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer{
+    background-color: #616364;
+}

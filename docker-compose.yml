@@ -1,0 +1,32 @@
+version: '3.2'
+
+services:
+
+  app:
+    image: ghcr.io/mjpinto-stefanini/php81-fpm:latest
+    labels:
+      - traefik.http.routers.painel.rule=Host(`sgpr.hemominas.test`)
+    volumes:
+      - ./src:/src
+    environment:
+      - PROJECT_WEBROOT=/src/public
+    ports:
+      - '5173:5173'
+
+  database:
+    image: wnameless/oracle-xe-11g-r2
+    labels:
+    - traefik.http.routers.datasgpr.rule=Host(`oracle-sgpr.test`)
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+    ports:
+      - "1522:1521"
+      - "5501:5500"
+    networks:
+      - default
+    
+
+networks:
+  default:
+    external:
+      name: dev-network

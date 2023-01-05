@@ -5,7 +5,7 @@ services:
   app:
     image: ghcr.io/mjpinto-stefanini/php81-fpm:latest
     labels:
-      - traefik.http.routers.painel.rule=Host(`sgpr.hemominas.test`)
+      - traefik.http.routers.painel.rule=Host(`sgpr.stefanini.test`)
     volumes:
       - ./src:/src
     environment:

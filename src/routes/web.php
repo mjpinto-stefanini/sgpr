@@ -42,6 +42,9 @@ Route::get('/', function () {
 });
 
 Route::get('load_despesas', 'App\Http\Controllers\ParameterController@loadDespesas')->name('load_despesas');
+Route::post('load_upgs', 'App\Http\Controllers\UpgController@loadUpgs')->name('load_upgs');
+
+
 
 Route::controller(ParameterController::class)->group(function(){
     Route::get('parameters-create-management', 'createManagement');
